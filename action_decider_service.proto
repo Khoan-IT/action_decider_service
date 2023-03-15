@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package action.decider.v1;
+
+
+service ACService {
+    rpc ActionDecider (DialogState) returns (ActionResponse){
+    }
+}
+
+message DialogState{
+    bytes state = 1;
+}
+
+message ActionResponse{
+    string action = 1;
+}
