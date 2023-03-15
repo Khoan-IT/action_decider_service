@@ -1,6 +1,6 @@
 # Service Action Decider using gRPC
 
-Download checkpoint at [thesis drive](https://drive.google.com/drive/folders/15QNWIEC5JrjJwS-24TG-myMmWW7VkbjT?usp=sharing). After that, move `checkpoint` forler and `intent_slot_labels` folder into `model` folder. 
+Download checkpoint at [thesis drive](https://drive.google.com/drive/folders/15QNWIEC5JrjJwS-24TG-myMmWW7VkbjT?usp=sharing). After that, move `checkpoint` folder and `intent_slot_labels` folder into `model` folder. 
 
 ## Run server by localhost
 
