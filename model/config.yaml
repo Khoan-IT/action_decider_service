@@ -6,7 +6,7 @@ agent:
   max_round_num: 10
 
 model:
-  hidden_size: 64
+  hidden_size: 128
 
 device:
   cuda: False

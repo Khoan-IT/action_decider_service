@@ -79,7 +79,7 @@ class ActionDeciderModel:
         
         
     def get_state_size(self) -> int:
-        return 2 * self.num_intents + 7 * self.num_slots + 3 + self.config['agent']['max_round_num']
+        return 2 * self.num_intents + 8 * self.num_slots + 4 + self.config['agent']['max_round_num']
     
     
     def convert_state_to_tensor(self, state: np.array) -> torch.Tensor:
