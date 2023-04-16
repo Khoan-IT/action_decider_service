@@ -1,4 +1,0 @@
-inform
-request
-thanks
-done
