@@ -12,7 +12,7 @@ from pipeline import ActionDeciderModel
 from concurrent import futures
 
 action_decider_interface = os.environ.get('ACTION_DECIDER_SERVER_INTERFACE', '0.0.0.0')
-action_decider_port = int(os.environ.get('ACTION_DECIDER_SERVER_PORT', 5002))
+action_decider_port = int(os.environ.get('ACTION_DECIDER_SERVER_PORT', 5003))
 action_decider_model_path = os.environ.get('ACTION_DECIDER_MODEL_PATH', 'model')
 
 class ACServiceServicer(action_decider_service_pb2_grpc.ACServiceServicer):

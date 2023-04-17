@@ -10,6 +10,7 @@ import numpy as np
 
 from architecture import DQNModel
 from typing import List, Dict, Union
+from azureml.core import Model, Workspace
 
 class ActionDeciderModel:
     def __init__(self, model_path: str, **kwargs):
@@ -27,8 +28,15 @@ class ActionDeciderModel:
         )
         self.device = 'cuda' if self.config['device']['cuda'] else 'cpu'
         try:
+            model_name = 'action_decider_model'
+            path = Model.get_model_path(
+                model_name=model_name,
+            )
+            # print('path ', path)
+
             self.model.load_state_dict(torch.load(
-                os.path.join(self.config['checkpoint']['checkpoint_dir'], 'model.pt'),
+                # os.path.join(self.config['checkpoint']['checkpoint_dir'], 'model.pt'),
+                path,
                 map_location=torch.device(self.device)
             ))
         except Exception:
