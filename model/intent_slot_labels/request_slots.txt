@@ -1,0 +1,6 @@
+name
+place
+host
+time
+benefit
+job_description
