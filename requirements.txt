@@ -1,7 +1,6 @@
 adal==1.2.7
 argcomplete==2.1.2
 azure-common==1.1.28
-azure-core==1.26.4
 azure-graphrbac==0.61.1
 azure-mgmt-authorization==3.0.0
 azure-mgmt-containerregistry==10.1.0
