@@ -28,15 +28,15 @@ class ActionDeciderModel:
         )
         self.device = 'cuda' if self.config['device']['cuda'] else 'cpu'
         try:
-            model_name = 'action_decider_model'
-            path = Model.get_model_path(
-                model_name=model_name,
-            )
+            # model_name = 'action_decider_model'
+            # path = Model.get_model_path(
+            #     model_name=model_name,
+            # )
             # print('path ', path)
 
             self.model.load_state_dict(torch.load(
-                # os.path.join(self.config['checkpoint']['checkpoint_dir'], 'model.pt'),
-                path,
+                os.path.join(self.config['checkpoint']['checkpoint_dir'], 'model.pt'),
+                # path,
                 map_location=torch.device(self.device)
             ))
         except Exception:
